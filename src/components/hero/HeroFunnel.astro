@@ -1,7 +1,7 @@
 ---
 import { Picture } from "astro-imagetools/components";
 import { marked } from "marked";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import Button from "@components/navigation/Button.astro";
 import VideoInline from "@components/media/VideoInline.vue";
 import VideoDialog from "@components/dialog/VideoDialog.vue";
@@ -259,23 +259,17 @@ const mediaClass = () => {
       .hero-funnel__buttons {
         @apply md:justify-start;
       } 
-
-
     }
 
      &__row-grid {
       @apply grid grid-cols-1 text-center gap-10 ;
-
-      
-
-
     }
     &__divider {
       @apply absolute bottom-0 left-0 right-0 overflow-hidden flex flex-col;
         
         min-height: 5rem;
         min-width: 1200px;
-        height: calc(100% - 80vh);
+        
         
         & > span {
           @apply block;
@@ -284,7 +278,11 @@ const mediaClass = () => {
 
     }
 
-  
+  &.row {
+    .hero-funnel__divider {
+      height: calc(100% - 80vh);
+    }
+  }
     
   }
 </style>

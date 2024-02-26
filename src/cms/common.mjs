@@ -869,7 +869,7 @@ export const blocks = {
           name: "title",
           label: t("title"),
           widget: "string",
-          default: t("image-gallery"),
+          default: t("pricing"),
         },
 
         {
@@ -1055,7 +1055,6 @@ export const blocks = {
           name: "items",
           label: t("items"),
           widget: "list",
-
           collapsed: true,
           fields: [
             {
